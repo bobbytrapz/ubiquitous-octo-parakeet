@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 func main() {
-	println("ubiquitous-octo-parakeet")
+	fmt.Println("ubiquitous-octo-parakeet")
 }
