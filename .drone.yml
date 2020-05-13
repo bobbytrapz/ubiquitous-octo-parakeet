@@ -1,0 +1,27 @@
+kind: pipeline
+type: docker
+name: default
+
+workspace:
+  base: /app
+  path: src/github.com/bobbytrapz/ubiquitous-octo-parakeet
+
+steps:
+  - name: test
+    image: golang
+    commands:
+      - go get
+      - go test
+  - name: build
+    image: golang
+    commands:
+      - go get
+      - go build -o app
+      - chmod +x app
+  - name: run
+    image: golang
+    commands:
+      - go get
+      - go build -o app
+      - chmod +x app
+      - ./app
